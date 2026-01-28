@@ -8,8 +8,12 @@ const oferta = [
     description: "Rzymskie, dzień-noc, drewniane. Dopasowane do Twojego wnętrza.",
   },
   {
-    title: "Dodatki",
-    description: "Karnisze, taśmy, podwiązki – detale, które robią różnicę.",
+    title: "Tapety",
+    description: "Ekskluzywne marki: Arte, Casadeco, Caselio, Cole&Son, Casamance, Romo.",
+  },
+  {
+    title: "Karnisze",
+    description: "Karnisze klasyczne, szyny manualne i elektryczne – styl i funkcjonalność.",
   },
 ];
 

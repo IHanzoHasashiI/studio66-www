@@ -12,6 +12,7 @@ export default function Footer() {
             Firany, zasłony, rolety i dekoracje okienne na wymiar – z pasją od wielu lat.
           </p>
         </div>
+
         <div>
           <h3 className="text-lg font-semibold text-neutral-900 mb-2">Nawigacja</h3>
           <ul className="space-y-2">
@@ -22,11 +23,22 @@ export default function Footer() {
             <li><Link href="/kontakt">Kontakt</Link></li>
           </ul>
         </div>
+
         <div>
           <h3 className="text-lg font-semibold text-neutral-900 mb-2">Kontakt</h3>
           <p>Al. Zwycięstwa 254/2, Gdynia</p>
-          <p>tel. <a href="tel:605250000" className="hover:underline">605 250 000</a></p>
-          <p>e-mail: <a href="mailto:kontakt@studio66.pl" className="hover:underline">kontakt@studio66.pl</a></p>
+          <p>
+            tel.{" "}
+            <a href="tel:605250000" className="hover:underline">
+              605 250 000
+            </a>
+          </p>
+          <p>
+            e-mail:{" "}
+            <a href="mailto:studio66gdynia@wp.pl" className="hover:underline">
+              studio66gdynia@wp.pl
+            </a>
+          </p>
         </div>
       </div>
     </footer>

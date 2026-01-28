@@ -9,6 +9,7 @@ import OfertaSection from "./components/premium/OfertaSection";
 import RealizacjeSection from "./components/premium/RealizacjeSection";
 import OpinieSection from "./components/premium/OpinieSection";
 import KontaktSection from "./components/premium/KontaktSection";
+import BrandsSlider from "./components/premium/BrandsSlider";
 import oferta from "@/data/oferta";
 
 export default function HomePage() {
@@ -36,10 +37,10 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
-
       <RealizacjeSection />
       <OpinieSection />
       <KontaktSection />
+      <BrandsSlider />
     </>
   );
 }

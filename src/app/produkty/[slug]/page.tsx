@@ -11,44 +11,54 @@ type CategoryInfo = {
 };
 
 const categoryContent: Record<string, CategoryInfo> = {
-  firany: {
-    title: "Firany na wymiar",
+  "firany-zaslony": {
+    title: "Firany i zasłony na wymiar",
     intro:
-      "Delikatne, półprzezroczyste tkaniny, które zmiękczają światło i dodają wnętrzu lekkości. Szyjemy firany na wymiar, dopasowując je do stylu Twojego wnętrza.",
+      "Profesjonalne doradztwo w zakresie doboru tkanin do Twojego wnętrza. Szyte na miarę pod indywidualne zamówienie z najwyższą starannością, dodając elegancji i przytulności. Bogaty wybór tkanin i systemów.",
     bullets: [
-      "Dobór tkanin od woalu po bardziej strukturalne materiały",
-      "Różne sposoby upięcia — na taśmie, przelotkach, flexach",
-      "Możliwość łączenia z zasłonami i roletami rzymskimi",
-    ],
-  },
-  zaslony: {
-    title: "Zasłony dekoracyjne i zaciemniające",
-    intro:
-      "Zasłony pełnią zarówno funkcję dekoracyjną, jak i praktyczną — poprawiają akustykę, ocieplają wnętrze i pozwalają regulować dopływ światła.",
-    bullets: [
-      "Tkaniny gładkie, strukturalne, welury, lniane mieszanki",
-      "Opcje zaciemnienia od lekkiego przyciemnienia po blackout",
-      "Szycie na wymiar wraz z doborem karniszy i systemów sufitowych",
+      "Dobór tkanin: od delikatnego woalu po welur i struktury",
+      "Szycie na wymiar i doradztwo techniczne",
+      "Możliwość połączenia z roletami rzymskimi i karniszami",
     ],
   },
   "rolety-plisy": {
     title: "Rolety i plisy",
     intro:
-      "Rozwiązania idealne tam, gdzie zależy nam na funkcjonalności i estetyce: rolety rzymskie, dzień-noc, plisy oraz rolety materiałowe.",
+      "Rolety materiałowe to najpopularniejsze osłony okienne, łączące funkcjonalność z estetyką. Plisy idealnie sprawdzają się również w oknach o nietypowych kształtach.",
     bullets: [
-      "Pomiar i dobór systemu do danego typu okna",
-      "Duży wybór tkanin i kolorów prowadnic",
-      "Montaż bezinwazyjny lub stały — w zależności od potrzeb",
+      "Szeroki wybór tkanin i kolorów",
+      "Regulacja światła i prywatności",
+      "Plisy z opcjami sterowania i personalizacji",
     ],
   },
   zaluzje: {
     title: "Żaluzje drewniane i aluminiowe",
     intro:
-      "Klasyczne rozwiązanie, które pozwala precyzyjnie regulować ilość światła. Idealne do mieszkań, biur i przestrzeni usługowych.",
+      "Szeroka oferta żaluzji wykonanych z drewna basswood, abachi, bambusa oraz aluminium i faux-wood (PVC). Lamela w rozmiarach 25 mm, 35 mm, 50 mm, 65 mm. Największy wybór kolorów.",
     bullets: [
-      "Żaluzje drewniane, aluminiowe i poziome",
-      "Różne szerokości lameli i kolory wykończeń",
-      "Montaż dopasowany do konstrukcji okna i wnęki",
+      "Drewno, aluminium, faux-wood (PVC)",
+      "Różne szerokości lameli: 25–65 mm",
+      "Dopasowanie do wnęki lub montaż na okno",
+    ],
+  },
+  tapety: {
+    title: "Tapety dekoracyjne",
+    intro:
+      "Ekskluzywne kolekcje tapet od światowych marek premium. Od klasycznych po nowoczesne wzory – idealne do salonów, sypialni, biur i hoteli.",
+    bullets: [
+      "Marki: Arte, Casadeco, Caselio, Cole&Son, Casamance, Romo",
+      "Wysoka jakość druku i struktur",
+      "Doradztwo przy wyborze oraz montaż",
+    ],
+  },
+  karnisze: {
+    title: "Karnisze i systemy szynowe",
+    intro:
+      "Karnisze klasyczne, szyny manualne i elektryczne – połączenie stylu, funkcjonalności i technologii. Idealne dopasowanie do każdego typu wnętrza.",
+    bullets: [
+      "Karnisze klasyczne i nowoczesne",
+      "Szyny ręczne i automatyczne",
+      "Montaż sufitowy i ścienny – wg potrzeb projektu",
     ],
   },
 };
@@ -60,58 +70,25 @@ type GalleryItem = {
 };
 
 const galleryData: Record<string, GalleryItem[]> = {
-  firany: [
+  "firany-zaslony": [
     {
-      title: "Apartament Orłowo",
+      title: "Salon Orłowo",
       image: "/images/firany-1.jpg",
-      description: "Delikatne firany z woalu w salonie z widokiem na morze.",
-    },
-    {
-      title: "Mieszkanie Śródmieście",
-      image: "/images/firany-2.jpg",
-      description:
-        "Firany szyte na wymiar z subtelną taśmą i wykończeniem flex.",
+      description: "Delikatne woalowe firany z zasłonami blackout.",
     },
   ],
-  zaslony: [
+  tapety: [
     {
-      title: "Penthouse Gdynia",
-      image: "/images/zaslony-1.jpg",
-      description:
-        "Zasłony zaciemniające z tkaniny welurowej w odcieniach szarości.",
-    },
-    {
-      title: "Biuro Redłowo",
-      image: "/images/zaslony-2.jpg",
-      description:
-        "Nowoczesne zasłony z lekkim połyskiem, montowane na szynie sufitowej.",
+      title: "Sypialnia z tapetą Arte",
+      image: "/images/tapety-1.jpg",
+      description: "Tapeta premium z geometrycznym wzorem od Arte.",
     },
   ],
-  "rolety-plisy": [
+  karnisze: [
     {
-      title: "Dom Chwarzno",
-      image: "/images/rolety-1.jpg",
-      description: "Rolety rzymskie w kuchni — praktyczne i eleganckie.",
-    },
-    {
-      title: "Gabinet Oliwa",
-      image: "/images/plisy-1.jpg",
-      description:
-        "Plisy w neutralnych barwach dopasowane do systemu okien uchylnych.",
-    },
-  ],
-  zaluzje: [
-    {
-      title: "Loft Gdańsk",
-      image: "/images/zaluzje-1.jpg",
-      description:
-        "Żaluzje drewniane o szerokości lameli 50 mm, kolor naturalny dąb.",
-    },
-    {
-      title: "Salon Reda",
-      image: "/images/zaluzje-2.jpg",
-      description:
-        "Żaluzje aluminiowe w kolorze antracytowym, dopasowane do wystroju.",
+      title: "Szyny elektryczne Somfy",
+      image: "/images/karnisze-1.jpg",
+      description: "Nowoczesne rozwiązanie z pilotem lub smartfonem.",
     },
   ],
 };
@@ -193,7 +170,7 @@ export default function ProductCategoryPage({
         </div>
       </section>
 
-      {/* Sekcja galerii realizacji */}
+      {/* Galeria */}
       {galleryData[slug] && galleryData[slug].length > 0 && (
         <section className="mt-6">
           <h2 className="text-2xl font-semibold mb-6">Nasze realizacje</h2>

@@ -1,25 +1,33 @@
 const categories = [
   {
-    name: "Firany",
-    slug: "firany",
-    description: "Lekkie, zwiewne tkaniny, które zmiękczają światło i nadają wnętrzu lekkości.",
-  },
-  {
-    name: "Zasłony",
-    slug: "zaslony",
-    description: "Tkaniny dekoracyjne i zaciemniające – od gładkich po strukturalne, szyte na wymiar.",
+    name: "Firany i zasłony",
+    slug: "firany-zaslony",
+    description:
+      "Profesjonalne doradztwo w zakresie doboru tkanin. Szyte na miarę, dodają wnętrzu elegancji i przytulności.",
   },
   {
     name: "Rolety i plisy",
     slug: "rolety-plisy",
     description:
-      "Funkcjonalne osłony okienne – rolety rzymskie, dzień-noc, plisy, rolety materiałowe.",
+      "Popularne osłony okienne – estetyczne, funkcjonalne, pasujące do każdego wnętrza. Plisy również do okien o nietypowych kształtach.",
   },
   {
     name: "Żaluzje",
     slug: "zaluzje",
     description:
-      "Żaluzje drewniane, aluminiowe i poziome, dopasowane do wymiarów i stylu wnętrza.",
+      "Żaluzje drewniane, aluminiowe, faux-wood. Różne szerokości lameli i bogaty wybór kolorów.",
+  },
+  {
+    name: "Karnisze",
+    slug: "karnisze",
+    description:
+      "Karnisze klasyczne, szyny manualne i elektryczne – styl i funkcjonalność dopasowana do Twojego wnętrza.",
+  },
+  {
+    name: "Tapety",
+    slug: "tapety",
+    description:
+      "Ekskluzywne marki: Arte, Casadeco, Caselio, Cole&Son, Casamance, Romo.",
   },
 ];
 
@@ -34,9 +42,7 @@ export default function ProduktyPage() {
           Produkty i systemy dekoracji okiennych
         </h1>
         <p className="max-w-2xl text-sm text-neutral-600">
-          Dobieramy tkaniny, systemy zawieszania i wykończenia do charakteru
-          wnętrza. Poniżej znajdziesz główne grupy produktów, z którymi
-          pracujemy na co dzień.
+          Dobieramy tkaniny, systemy zawieszania i wykończenia do charakteru wnętrza. Poniżej znajdziesz główne grupy produktów, z którymi pracujemy na co dzień.
         </p>
       </header>
 
@@ -55,6 +61,14 @@ export default function ProduktyPage() {
           </a>
         ))}
       </section>
+
+      {/* Hasło o współpracy */}
+      <div className="pt-10 text-center">
+        <p className="text-sm uppercase tracking-wide text-neutral-600">
+          Współpracujemy z topowymi markami
+        </p>
+        {/* tutaj możesz później wrzucić komponent z logo marek */}
+      </div>
     </div>
   );
 }
