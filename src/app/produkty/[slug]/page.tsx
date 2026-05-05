@@ -3,101 +3,84 @@
 import { use, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Image from "next/image";
 
 type CategoryInfo = {
   title: string;
   intro: string;
   bullets: string[];
+  images: string[];
 };
 
 const categoryContent: Record<string, CategoryInfo> = {
   "firany-zaslony": {
     title: "Firany i zasłony na wymiar",
-    intro:
-      "Profesjonalne doradztwo w zakresie doboru tkanin do Twojego wnętrza. Szyte na miarę pod indywidualne zamówienie z najwyższą starannością, dodając elegancji i przytulności. Bogaty wybór tkanin i systemów.",
-    bullets: [
-      "Dobór tkanin: od delikatnego woalu po welur i struktury",
-      "Szycie na wymiar i doradztwo techniczne",
-      "Możliwość połączenia z roletami rzymskimi i karniszami",
+    intro: "Profesjonalne doradztwo w zakresie doboru tkanin do Twojego wnętrza. Szyte na miarę pod indywidualne zamówienie z najwyższą starannością, dodając elegancji i przytulności.",
+    bullets: ["Dobór tkanin: od delikatnego woalu po welur i struktury", "Szycie na wymiar i doradztwo techniczne", "Możliwość połączenia z roletami rzymskimi i karniszami"],
+    images: [
+      "/images/Produkty/Firany i zasłony/1.jpg",
+      "/images/Produkty/Firany i zasłony/2.jpg",
+      "/images/Produkty/Firany i zasłony/3.jpg",
+      "/images/Produkty/Firany i zasłony/4.jpg",
+      "/images/Produkty/Firany i zasłony/5.jpg",
+      "/images/Produkty/Firany i zasłony/6.jpg",
+      "/images/Produkty/Firany i zasłony/7.jpg",
+      // dodawaj tutaj kolejne jak masz
     ],
   },
   "rolety-plisy": {
     title: "Rolety i plisy",
-    intro:
-      "Rolety materiałowe to najpopularniejsze osłony okienne, łączące funkcjonalność z estetyką. Plisy idealnie sprawdzają się również w oknach o nietypowych kształtach.",
-    bullets: [
-      "Szeroki wybór tkanin i kolorów",
-      "Regulacja światła i prywatności",
-      "Plisy z opcjami sterowania i personalizacji",
+    intro: "Popularne osłony okienne – estetyczne, funkcjonalne, pasujące do każdego wnętrza.",
+    bullets: ["Rolety materiałowe i rzymskie", "Plisy do okien nietypowych", "Szeroki wybór kolorów i faktur"],
+    images: [
+      "/images/Produkty/Rolety i plisy/1.jpg",
+      "/images/Produkty/Rolety i plisy/2.jpg",
+      "/images/Produkty/Rolety i plisy/3.jpg",
+      "/images/Produkty/Rolety i plisy/4.jpg",
+      "/images/Produkty/Rolety i plisy/5.jpg",
     ],
   },
   zaluzje: {
-    title: "Żaluzje drewniane i aluminiowe",
-    intro:
-      "Szeroka oferta żaluzji wykonanych z drewna basswood, abachi, bambusa oraz aluminium i faux-wood (PVC). Lamela w rozmiarach 25 mm, 35 mm, 50 mm, 65 mm. Największy wybór kolorów.",
-    bullets: [
-      "Drewno, aluminium, faux-wood (PVC)",
-      "Różne szerokości lameli: 25–65 mm",
-      "Dopasowanie do wnęki lub montaż na okno",
-    ],
-  },
-  tapety: {
-    title: "Tapety dekoracyjne",
-    intro:
-      "Ekskluzywne kolekcje tapet od światowych marek premium. Od klasycznych po nowoczesne wzory – idealne do salonów, sypialni, biur i hoteli.",
-    bullets: [
-      "Marki: Arte, Casadeco, Caselio, Cole&Son, Casamance, Romo",
-      "Wysoka jakość druku i struktur",
-      "Doradztwo przy wyborze oraz montaż",
+    title: "Żaluzje",
+    intro: "Żaluzje drewniane, aluminiowe, bambusowe i faux-wood.",
+    bullets: ["Lamelle 25mm, 35mm, 50mm, 65mm", "Bogata paleta kolorów"],
+    images: [
+      "/images/Produkty/Żaluzje/1.jpg",
+      "/images/Produkty/Żaluzje/2.jpg",
+      "/images/Produkty/Żaluzje/3.jpg",
+      "/images/Produkty/Żaluzje/4.jpg",
+      "/images/Produkty/Żaluzje/5.jpg",
+      "/images/Produkty/Żaluzje/6.jpg",
     ],
   },
   karnisze: {
     title: "Karnisze i systemy szynowe",
-    intro:
-      "Karnisze klasyczne, szyny manualne i elektryczne – połączenie stylu, funkcjonalności i technologii. Idealne dopasowanie do każdego typu wnętrza.",
-    bullets: [
-      "Karnisze klasyczne i nowoczesne",
-      "Szyny ręczne i automatyczne",
-      "Montaż sufitowy i ścienny – wg potrzeb projektu",
+    intro: "Karnisze klasyczne, szyny manualne i elektryczne.",
+    bullets: ["Karnisze drewniane i metalowe", "Szyny elektryczne"],
+    images: [
+      "/images/Produkty/Karnisze/1.png",
+      "/images/Produkty/Karnisze/2.png",
+      "/images/Produkty/Karnisze/3.png",
+      "/images/Produkty/Karnisze/4.png",
+      "/images/Produkty/Karnisze/5.png",
+    ],
+  },
+  tapety: {
+    title: "Tapety premium",
+    intro: "Ekskluzywne kolekcje tapet od światowych marek.",
+    bullets: ["ARTE, Casadeco, Cole&Son, Casamance, Romo"],
+    images: [
+      "/images/Produkty/Tapety/1.jpg",
+      "/images/Produkty/Tapety/2.webp",
+      "/images/Produkty/Tapety/3.webp",
+      "/images/Produkty/Tapety/4.jpg",
+      "/images/Produkty/Tapety/5.jpg",
+      "/images/Produkty/Tapety/6.jpg",
     ],
   },
 };
 
-type GalleryItem = {
-  title: string;
-  image: string;
-  description: string;
-};
-
-const galleryData: Record<string, GalleryItem[]> = {
-  "firany-zaslony": [
-    {
-      title: "Salon Orłowo",
-      image: "/images/firany-1.jpg",
-      description: "Delikatne woalowe firany z zasłonami blackout.",
-    },
-  ],
-  tapety: [
-    {
-      title: "Sypialnia z tapetą Arte",
-      image: "/images/tapety-1.jpg",
-      description: "Tapeta premium z geometrycznym wzorem od Arte.",
-    },
-  ],
-  karnisze: [
-    {
-      title: "Szyny elektryczne Somfy",
-      image: "/images/karnisze-1.jpg",
-      description: "Nowoczesne rozwiązanie z pilotem lub smartfonem.",
-    },
-  ],
-};
-
-export default function ProductCategoryPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default function ProductCategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
   const data = categoryContent[slug];
 
@@ -105,112 +88,76 @@ export default function ProductCategoryPage({
   const [currentIndex, setCurrentIndex] = useState(0);
 
   if (!data) {
-    return (
-      <div className="space-y-4 py-6">
-        <h1 className="text-2xl font-semibold tracking-tight">
-          Kategoria niedostępna
-        </h1>
-        <p className="text-sm text-neutral-600">
-          Wygląda na to, że ta kategoria produktów nie istnieje. Wróć do{" "}
-          <a href="/produkty" className="text-accent underline">
-            listy produktów
-          </a>
-          .
-        </p>
-      </div>
-    );
+    return <div className="py-12 text-center">Kategoria nie istnieje</div>;
   }
 
-  const slides =
-    galleryData[slug]?.map((item) => ({
-      src: item.image,
-      title: item.title,
-      description: item.description,
-    })) ?? [];
+  const slides = data.images.map(src => ({ src }));
 
   return (
-    <div className="space-y-10 py-6">
-      {/* nagłówek kategorii */}
-      <header className="space-y-2">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">
-          Produkty
-        </p>
-        <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">
-          {data.title}
-        </h1>
-        <p className="max-w-2xl text-sm text-neutral-600">{data.intro}</p>
+    <div className="space-y-12 py-6">
+      <header className="space-y-3">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">PRODUKTY</p>
+        <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">{data.title}</h1>
+        <p className="max-w-3xl text-neutral-600 leading-relaxed">{data.intro}</p>
       </header>
 
-      {/* opis + bulletpointy */}
-      <section className="grid gap-6 md:grid-cols-[2fr,3fr]">
-        <div className="space-y-3 text-sm text-neutral-700">
-          <h2 className="text-sm font-semibold text-primary">
-            Jak pracujemy z tą kategorią?
-          </h2>
-          <ul className="list-disc space-y-1 pl-5">
-            {data.bullets.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
+      <section className="grid gap-8 md:grid-cols-[2fr,1fr]">
+        <div className="space-y-4">
+          <h2 className="text-lg font-semibold">Jak pracujemy z tą kategorią?</h2>
+          <ul className="list-disc pl-5 space-y-2 text-neutral-700">
+            {data.bullets.map((item, i) => <li key={i}>{item}</li>)}
           </ul>
         </div>
-        <div className="card-hover flex flex-col justify-between border border-soft p-5">
+
+        {/* Poprawiony przycisk */}
+        <div className="border border-neutral-200 rounded-3xl p-8 flex flex-col">
           <div>
-            <h3 className="text-sm font-semibold text-primary">
-              Umów niezobowiązujące spotkanie
-            </h3>
-            <p className="mt-2 text-sm text-neutral-600">
-              Przygotujemy propozycje tkanin i systemów do Twojego wnętrza.
-              Możemy spotkać się w Studio 66 lub na miejscu – w mieszkaniu,
-              apartamencie albo biurze.
-            </p>
+            <h3 className="font-semibold text-lg">Umów niezobowiązujące spotkanie</h3>
+            <p className="mt-3 text-neutral-600">Przygotujemy propozycje dopasowane do Twojego wnętrza.</p>
           </div>
-          <a href="/#kontakt" className="mt-4 self-start btn-gold">
+          <a 
+            href="/#kontakt" 
+            className="mt-8 self-start bg-amber-700 hover:bg-amber-800 text-white px-8 py-3.5 rounded-full text-sm font-medium transition"
+          >
             Skontaktuj się z nami
           </a>
         </div>
       </section>
 
-      {/* Galeria */}
-      {galleryData[slug] && galleryData[slug].length > 0 && (
-        <section className="mt-6">
-          <h2 className="text-2xl font-semibold mb-6">Nasze realizacje</h2>
-          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {galleryData[slug].map((item, i) => (
+      {/* Galeria - tylko istniejące zdjęcia */}
+      {data.images.length > 0 && (
+        <section>
+          <h2 className="text-2xl font-semibold mb-8">Nasze realizacje</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {data.images.map((src, i) => (
               <div
                 key={i}
-                onClick={() => {
-                  setCurrentIndex(i);
-                  setOpen(true);
-                }}
-                className="cursor-pointer overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300"
+                onClick={() => { setCurrentIndex(i); setOpen(true); }}
+                className="group cursor-pointer overflow-hidden rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500"
               >
-                <div
-                  className="aspect-[4/3] bg-cover bg-center hover:scale-105 transition-transform duration-300"
-                  style={{ backgroundImage: `url(${item.image})` }}
-                />
-                <div className="p-4">
-                  <h3 className="font-medium text-lg">{item.title}</h3>
-                  <p className="text-sm text-neutral-600 mt-1">
-                    {item.description}
-                  </p>
+                <div className="relative aspect-[4/3] bg-neutral-100">
+                  <Image
+                    src={src}
+                    alt={`Realizacja ${i + 1}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
               </div>
             ))}
           </div>
-
-          <Lightbox
-            open={open}
-            close={() => setOpen(false)}
-            index={currentIndex}
-            slides={slides}
-            animation={{ fade: 300 }}
-            controller={{ closeOnBackdropClick: true }}
-            styles={{
-              container: { backgroundColor: "rgba(0, 0, 0, 0.9)" },
-            }}
-          />
         </section>
       )}
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={currentIndex}
+        slides={slides}
+        animation={{ fade: 300 }}
+        styles={{ container: { backgroundColor: "rgba(0,0,0,0.95)" } }}
+      />
     </div>
   );
 }
