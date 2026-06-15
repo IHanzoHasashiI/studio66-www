@@ -61,8 +61,7 @@ const categoryContent: Record<string, CategoryInfo> = {
       "/images/Produkty/Żaluzje/4.jpg",
       "/images/Produkty/Żaluzje/5.jpg",
       "/images/Produkty/Żaluzje/6.jpg",
-      "/images/Produkty/Żaluzje/7.jpg",
-      "/images/Produkty/Żaluzje/8.jpg",
+
     ],
   },
   karnisze: {
@@ -87,11 +86,10 @@ const categoryContent: Record<string, CategoryInfo> = {
       "/images/Produkty/Tapety/3.webp",
       "/images/Produkty/Tapety/4.jpg",
       "/images/Produkty/Tapety/5.jpg",
-      "/images/Produkty/Tapety/6.jpg",
-      "/images/Produkty/Tapety/7.webp",
+      "/images/Produkty/Tapety/6.webp",
+      "/images/Produkty/Tapety/7.jpg",
       "/images/Produkty/Tapety/8.jpg",
       "/images/Produkty/Tapety/9.jpg",
-      "/images/Produkty/Tapety/10.jpg",
     ],
   },
 };
