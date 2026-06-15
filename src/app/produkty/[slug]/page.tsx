@@ -25,12 +25,17 @@ const categoryContent: Record<string, CategoryInfo> = {
       "/images/Produkty/Firany i zasłony/5.jpg",
       "/images/Produkty/Firany i zasłony/6.jpg",
       "/images/Produkty/Firany i zasłony/7.jpg",
+       "/images/Produkty/Firany i zasłony/8.jpg",
+        "/images/Produkty/Firany i zasłony/9.jpg",
+         "/images/Produkty/Firany i zasłony/10.jpg",
+          "/images/Produkty/Firany i zasłony/11.jpg",
+           "/images/Produkty/Firany i zasłony/12.jpg",
       // dodawaj tutaj kolejne jak masz
     ],
   },
   "rolety-plisy": {
     title: "Rolety i plisy",
-    intro: "Popularne osłony okienne – estetyczne, funkcjonalne, pasujące do każdego wnętrza.",
+    intro: "Rolety materiałowe to najpopularniejsze osłony okienne, łączące funkcjonalność z estetyką i pasujące do każdego wnętrza. Umożliwiają łatwą i płynną regulację oraz oferują szeroki wybór tkanin. Plisy to nowoczesne i precyzyjnie wykonane osłony okienne, przeznaczone także do okien o nietypowych kształtach. Oferują szerokie możliwości personalizacji - od sposobu sterowania, przez kolory profili, po wysokiej jakości tkaniny.",
     bullets: ["Rolety materiałowe i rzymskie", "Plisy do okien nietypowych", "Szeroki wybór kolorów i faktur"],
     images: [
       "/images/Produkty/Rolety i plisy/1.jpg",
@@ -38,11 +43,16 @@ const categoryContent: Record<string, CategoryInfo> = {
       "/images/Produkty/Rolety i plisy/3.jpg",
       "/images/Produkty/Rolety i plisy/4.jpg",
       "/images/Produkty/Rolety i plisy/5.jpg",
+       "/images/Produkty/Rolety i plisy/6.jpg",
+        "/images/Produkty/Rolety i plisy/7.jpg",
+         "/images/Produkty/Rolety i plisy/8.jpg",
+          "/images/Produkty/Rolety i plisy/9.jpg",
+           "/images/Produkty/Rolety i plisy/10.jpg",
     ],
   },
   zaluzje: {
     title: "Żaluzje",
-    intro: "Żaluzje drewniane, aluminiowe, bambusowe i faux-wood.",
+    intro: "Szeroka oferta żaluzji wyukonanych z drewna basswood, abachi,bambus oraz z aluminium i faux-wood(PVC). Każda kolekcja dostępna jest w rozmiarze lameli 25mm, 35mm, 50mm oraz 65mm. Największy wybór kolorów.",
     bullets: ["Lamelle 25mm, 35mm, 50mm, 65mm", "Bogata paleta kolorów"],
     images: [
       "/images/Produkty/Żaluzje/1.jpg",
@@ -51,6 +61,8 @@ const categoryContent: Record<string, CategoryInfo> = {
       "/images/Produkty/Żaluzje/4.jpg",
       "/images/Produkty/Żaluzje/5.jpg",
       "/images/Produkty/Żaluzje/6.jpg",
+      "/images/Produkty/Żaluzje/7.jpg",
+      "/images/Produkty/Żaluzje/8.jpg",
     ],
   },
   karnisze: {
@@ -76,6 +88,10 @@ const categoryContent: Record<string, CategoryInfo> = {
       "/images/Produkty/Tapety/4.jpg",
       "/images/Produkty/Tapety/5.jpg",
       "/images/Produkty/Tapety/6.jpg",
+      "/images/Produkty/Tapety/7.webp",
+      "/images/Produkty/Tapety/8.jpg",
+      "/images/Produkty/Tapety/9.jpg",
+      "/images/Produkty/Tapety/10.jpg",
     ],
   },
 };
@@ -103,7 +119,7 @@ export default function ProductCategoryPage({ params }: { params: Promise<{ slug
 
       <section className="grid gap-8 md:grid-cols-[2fr,1fr]">
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold">Jak pracujemy z tą kategorią?</h2>
+          <h2 className="text-lg font-semibold"></h2>
           <ul className="list-disc pl-5 space-y-2 text-neutral-700">
             {data.bullets.map((item, i) => <li key={i}>{item}</li>)}
           </ul>
