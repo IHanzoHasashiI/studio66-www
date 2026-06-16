@@ -9,7 +9,7 @@ export default function Hero() {
     <section className="relative overflow-hidden h-[85vh] bg-black text-white flex items-center justify-center">
       {/* Tło obrazkowe */}
       <Image
-        src="/hero.jpg" // ← Twój obrazek w folderze /public
+        src="/hero.png" // ← Twój obrazek w folderze /public
         alt="Dekoracje okienne"
         layout="fill"
         objectFit="cover"

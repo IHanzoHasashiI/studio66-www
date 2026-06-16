@@ -24,7 +24,7 @@ export default function NowosciStudio66Page() {
 
       {/* Zdjęcia z folderu Nowości */}
       <div className="my-12 space-y-8">
-        <img src="/images/Blog/TAPETA 1.jpg" alt="Tapeta 1" className="rounded-xl w-full shadow-md" />
+        <img src="/images/Blog/TAPETA 1.webp" alt="Tapeta 1" className="rounded-xl w-full shadow-md" />
         <img src="/images/Blog/TAPETA 2.jpg" alt="Tapeta 2" className="rounded-xl w-full shadow-md" />
         <img src="/images/Blog/TAPETA 3.jpg" alt="Tapeta 3" className="rounded-xl w-full shadow-md" />
         <img src="/images/Blog/tapeta.jpg" alt="Tapeta" className="rounded-xl w-full shadow-md" />

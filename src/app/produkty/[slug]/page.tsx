@@ -66,8 +66,8 @@ const categoryContent: Record<string, CategoryInfo> = {
   },
   karnisze: {
     title: "Karnisze i systemy szynowe",
-    intro: "Karnisze klasyczne, szyny manualne i elektryczne.",
-    bullets: ["Karnisze drewniane i metalowe", "Szyny elektryczne"],
+    intro: "Karnisze klasyczne, szyny manualne i elektryczne. Oryginalne szyny sufitowe, manualne i elektryczne do ZADAŃ SPECJALNYCH. Stylowe rozwiązania i systemy do montażu dekoracji okien. Eleganckie zakończenie do karniszy.",
+    bullets: ["Karnisze metalowe", "Szyny elektryczne"],
     images: [
       "/images/Produkty/Karnisze/1.png",
       "/images/Produkty/Karnisze/2.png",
